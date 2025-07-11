@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Converter</title>
+    <script>
+        function action() {
+            alert("Conversion started. Please wait...");
+        }
+    </script>
+</head>
+<body>
+    <h2>Select Image to convert</h2>
+    <form method="POST" enctype="multipart/form-data" action="{% url 'convert_images' %}">
+        {% csrf_token %}
+        <label>Select Images</label><br>
+        <input type="file" name="images" multiple required><br><br>
+        <label>Output Format</label><br>
+        <select name="format">
+            <option value="PNG">PNG</option>
+            <option value="JPG">JPG</option>
+            <option value="BMP">BMP</option>
+            <option value="GIF">GIF</option>
+        </select><br><br>
+
+        <label>Width (optional)</label><br>
+        <input type="number" name="width"><br><br>
+        
+        <label>Height (optional)</label><br>
+        <input type="number" name="height"><br><br>
+
+        <label>JPEG Quality (1-100, optional)</label>
+        <input type="number" name="quality"><br><br>
+
+        <input type="submit" value="Convert" onclick="action()">
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    {% if converted_files %}
+    <h3>Download Converted Images</h3>
+    <ul>
+        {% for file in converted_files %}
+        <li><a href="{{ file }}" download>Download </a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
