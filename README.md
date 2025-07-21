@@ -9,10 +9,10 @@ Upload multiple images at once
   4. Clean and user-friendly web interface
 
 🛠️ Technologies Used
-Django – Web framework for Python
-Pillow – Python Imaging Library for image processing
-HTML/CSS – For basic frontend
-UUID – For handling unique file names
+  1. Django – Web framework for Python
+  2. Pillow – Python Imaging Library for image processing
+  3. HTML/CSS – For basic frontend
+  4. UUID – For handling unique file names
 
 📦 Requirements
 bash:
@@ -20,17 +20,17 @@ bash:
 
 🚀 How to Run the Project
 1. Clone the repository:
-  bash:
+   bash:
     git clone https://github.com/subash0306/Python-Projects.git
     cd Python-Projects/image\ converter/image_converter
 
-2. Run migrations:
+3. Run migrations:
    python manage.py migrate
 
-3. Start the development server:
+4. Start the development server:
    python manage.py runserver
 
-4. Open your browser and go to:
+5. Open your browser and go to:
   👉 http://127.0.0.1:8000/
 
 📂 Project Structure
