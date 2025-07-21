@@ -20,9 +20,8 @@ bash:
 
 🚀 How to Run the Project
 1. Clone the repository:
-   bash:
-    git clone https://github.com/subash0306/Python-Projects.git
-    cd Python-Projects/image\ converter/image_converter
+  i. git clone https://github.com/subash0306/Python-Projects.git
+  ii. cd Python-Projects/image\ converter/image_converter
 
 3. Run migrations:
    python manage.py migrate
