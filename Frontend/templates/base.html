@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    {% include 'navbar.html' %}
+
+    
+<!-- Dynamic Contents -->
+{% block content %}
+
+{% endblock %}
+<footer>
+    <P>Copy Rights @ 2019</P>
+</footer>
+</body>
+</html>
